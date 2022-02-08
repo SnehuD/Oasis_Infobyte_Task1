@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Task 1 : Landing page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(to right, rgb(163, 241, 215), rgb(147, 240, 240));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .scrollup {
+            background-color: white;
+            width: 50px;
+            font-size: 20px;
+            height: 50px;
+            text-align: center;
+            bottom: 10px;
+            right: 10px;
+            position: fixed;
+            border-radius: 10%;
+            cursor: pointer;
+            z-index: 99;
+            padding: 10px;
+        }
+
+        .card-deck {
+            padding: 10px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: aquamarine;
+        }
+
+        .rainbow-text {
+            animation: colorRotate 6s linear 0s infinite;
+        }
+
+        .navbar-brand {
+            font-size: 35px;
+            border-left-style: dotted;
+            padding: 5px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        @keyframes colorRotate {
+            from {
+                color: #6666ff;
+            }
+
+            10% {
+                color: #0099ff;
+            }
+
+            50% {
+                color: #00ff00;
+            }
+
+            75% {
+                color: #ff3399;
+            }
+
+            100% {
+                color: #6666ff;
+            }
+        }
+
+        .nav-link {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        .card-title {
+            color: white;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: rgb(107, 221, 176);
+        }
+
+        .quote {
+            text-align: center;
+            color: white;
+        }
+
+        .quote p {
+            font-size: 35px;
+            padding-bottom: 10%;
+        }
+
+        .main {
+            font-size: 50px;
+            font-weight: bold;
+            padding: 50px;
+            text-transform: uppercase;
+            margin-bottom: 100px;
+        }
+
+        .social-icon {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .social-icon a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+        }
+        .contact{
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(aqua,aquamarine)"
+        id="home">
+        <div class="container-fluid">
+            <a class="navbar-brand rainbow-text" href="javascript:void(0)" style="color:#aa00f2"><b>Propad</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="quote">
+        <div class="main">You Run Your <span class="rainbow-text">business</span>;<br> we run your <span
+                class="rainbow-text">it</span>
+            <div class="text-center">
+                <button class="btn btn-primary" onclick="location.href = '#contact'">Get In Touch</button>
+            </div>
+            <hr>
+        </div>
+        <p>We are here to Provide Our Best Services !!<br><br>
+            Whether you are looking at Wireless Networking, Data Backup, other IT services, or just want to better
+            understand your current environment, <b>Propad</b> can provide the expertise to help you build a strategy
+            that is right for you.</p>
+
+    </div>
+    <div id="services" class="card">
+        <div class="text-center">
+            <h1>Services</h1>
+            <h3>There Are Many Services Which Propad Provide To Their Client</h3>
+        </div>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Installation</h4>
+                    <img class="card-img-top" src="images/installation.jpg" alt="Installation">
+                    <p class="card-text">Our Installation Services bring you the knowledge and experience of our
+                        certified engineers to help you deploy new technologies faster and more efficiently, allowing
+                        your business to begin use with minimal interruption to your daily processes. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Assessment</h4>
+                    <img class="card-img-top" src="images/assesment.jpg" alt="Assesstment">
+                    <p class="card-text">It’s easy to get lost in the day-to-day demands of running a business. Our
+                        Assessment Services are designed to help you understand where years of “keeping the lights on”
+                        has led you. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Migration</h4>
+                    <img class="card-img-top" src="images/migration.jpg" alt="Assesstment">
+                    <p class="card-text">Changing to a new strategy is usually intimidating. Our Migration Services are
+                        designed to help you transition seamlessly, whatever the technologies involved.Perhaps you’ve
+                        been putting off moving to the cloud because the “getting there” seems like an impossible
+                        hurdle.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Health Check</h4>
+                    <img class="card-img-top" src="images/Health-Check.jpg" alt="Assesstment">
+                    <p class="card-text">Our Health Check Services review the current environment, the implementation
+                        parameters, and configuration to see if changes or updates should be made to improve
+                        reliability, flexibility, and availability.card</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="projects" class="card">
+        <div class="text-center">
+            <h1>Projects</h1>
+            <h3>There are Many Projects Were Developed By Our Team These are Some Demo</h3>
+        </div>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Co-Vaccine Registration</h4>
+                    <p class="card-text">In This Project User can Register his Profile and then one Verification mail
+                        will sent on his respective mail then he have to
+                        verifiy his mail then only he will eligible for the vaccination.<br>
+                        <b>Project Link : </b><br><a href="http://cowinselfregistration.epizy.com/"
+                            target="__blank">www.cowinregistration.com</a>
+                        <hr>
+                        <b>Front End : </b>HTML,CSS,Javascript<br>
+                        <b>Back End : </b>PHP<br>
+                        <b>Database : </b>PhpMyAdmin
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Linkcode Technologies</h4>
+                    <p class="card-text">
+                        Linkcode Technologies Industry is the Most Popular Software Industry In Pune For Providing
+                        Software &
+                        Internship For Full Stack Java,Python Full Stack Development<br>
+
+                        <b>Project Link : </b><br><a href="https://linkcode.in" target="__blank">www.linkcode.in</a>
+                        <hr>
+                        <b>Front End : </b>HTML5,CSS3,Javascript<br>
+                        <b>Back End : </b>Java<br>
+                        <b>Database : </b>Oracle 10g EE
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">CRUD Application For <a href="http://www.propad.great-site.net"
+                            target="__blank">Propad</a>
+                    </h4>
+                    <p class="card-text">
+                        This CRUD Application Was made for Propad Solution for their Employee Registration.In that
+                        Employee Can Register,Display,Update,Delete and Search His Profile<br>
+                        <b>Project Link : </b><br><a href="http://www.pp2.epizy.com" target="__blank">pp2.epizy.com</a>
+                        <hr>
+                        <b>Front End : </b>HTML5,CSS3,Javascript<br>
+                        <b>Back End : </b>PHP<br>
+                        <b>Database : </b>PhpMyAdmin
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Propad IT Solutions</h4>
+                    <p class="card-text">This Website Is Our Root Or Parent Website.Propad Solutions
+                        Provides All type Of Services Like Software,Networking, Connectivity and Security to the Client
+                        Remotely Also.<br>
+                        <b>Project Link : </b><br><a href="http://www.propad.great-site.net" target="__blank">Propad
+                            Solutions</a>
+                        <hr>
+                        <b>Front End : </b>HTML5,CSS3,Javascript<br>
+                        <b>Back End : </b>PHP<br>
+                        <b>Library : </b>PHP Mailer<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact card">
+        <h1 class="text-white">Contact</h1>
+        <form action="javascript:sendemail();" method="post" class="w-75 form">
+            <p id="emailsent"></p>
+            <input type="text" name="nm" id="nm" class="form-control my-4 text-center" placeholder="Enter Your Name"
+                required>
+            <input type="email" name="email" id="email" class="form-control my-4 text-center"
+                placeholder="Enter Your Email" required>
+            <textarea name="msg" id="msg" class="form-control my-4 text-center" placeholder="Enter Message"
+                required></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="scrollup" onclick="location.href = '#'">
+        <i title="Go to top" class="fa fa-arrow-up"></i>
+    </div>
+    <div class="footer card">
+        <div class="text-left">
+            <h1>Propad IT Solutions</h1>
+            <h4 class="text-white">We Are Here To Provide You Best Services</h4>
+        </div>
+        <div class="text-right">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="social-icon my-4">
+            <a href="tel:+91 9860684680" class="fa fa-phone text-primary" target="__blank"></a>
+            <a href="https://api.whatsapp.com/send/?phone=+919860684680&text=Hii%20Propad%20!!!!"
+                class="fa fa-whatsapp text-success" target="__blank"></a>
+            <a href="https://www.instagram.com/snehaldahake19/" class="fa fa-instagram text-danger" target="__blank"></a>
+            <a href="#" class="fa fa-twitter text-primary" target="__blank"></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=snehaldahake19@gmail.com" target="__blank"
+                class="fa fa-envelope text-danger"></a>
+            <a href="https://www.linkedin.com/in/snehal-dahake-701bba219/" class="fa fa-linkedin text-primary"
+                target="__blank"></a>
+            <a href="https://github.com/SnehuD" class="fa fa-github text-dark"></a>
+
+        </div>
+        <p class="text-center">Powered By <a href="http://www.propad.great-site.net" target="__blank">Propad IT
+                Solutions</a></p>
+        <p class="text-left text-white">©Propad IT Solutions All Rights Reserved</p>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        (function (_0x48a7bd, _0x89b9c7) { var _0xad804b = _0x48a7bd(); while (!![]) { try { var _0x4e6c70 = -parseInt(_0x5bba(0x69)) / 0x1 + parseInt(_0x5bba(0x6f)) / 0x2 + parseInt(_0x5bba(0x66)) / 0x3 + parseInt(_0x5bba(0x79)) / 0x4 + parseInt(_0x5bba(0x6d)) / 0x5 * (parseInt(_0x5bba(0x74)) / 0x6) + -parseInt(_0x5bba(0x67)) / 0x7 + parseInt(_0x5bba(0x76)) / 0x8 * (-parseInt(_0x5bba(0x81)) / 0x9); if (_0x4e6c70 === _0x89b9c7) break; else _0xad804b['push'](_0xad804b['shift']()); } catch (_0x12a2df) { _0xad804b['push'](_0xad804b['shift']()); } } }(_0x3ca6, 0x4ecba)); function _0x3ca6() { var _0x294b4e = ['innerHTML', 'val', '99XDKreu', 'send', '!!\x20Something\x20Went\x20Wrong\x20!!', '1218465qrunnk', '3838142qMSZaa', 'portfoliopranavk@gmail.com', '60934vdqLba', 'Contact\x20Message\x20From\x20Propad\x20Landing\x20Page', '#email', 'emailsent', '10cBQsgu', '<br>Message:\x20', '591632mEuyeH', 'getElementById', 'services.propad@gmail.com', 'Oops\x20', '#msg', '1068822nisILP', '<br>Email:\x20', '239504iLyBNm', 'then', 'Port@1234', '812236Feqkve', 'Thanks\x20for\x20Contact\x20Us\x20', '#nm', 'className', 'error', 'smtp.gmail.com']; _0x3ca6 = function () { return _0x294b4e; }; return _0x3ca6(); } function _0x5bba(_0x5001b5, _0x31747f) { var _0x3ca662 = _0x3ca6(); return _0x5bba = function (_0x5bbada, _0xe507b4) { _0x5bbada = _0x5bbada - 0x65; var _0x490277 = _0x3ca662[_0x5bbada]; return _0x490277; }, _0x5bba(_0x5001b5, _0x31747f); } function sendemail() { var _0x3b77ca = $(_0x5bba(0x7b))[_0x5bba(0x80)](), _0x323607 = $(_0x5bba(0x6b))['val'](), _0x3b7e9b = $(_0x5bba(0x73))['val'](), _0x2b16fb = 'Name:\x20' + _0x3b77ca + _0x5bba(0x75) + _0x323607 + _0x5bba(0x6e) + _0x3b7e9b; Email[_0x5bba(0x82)]({ 'Host': _0x5bba(0x7e), 'Username': _0x5bba(0x68), 'Password': _0x5bba(0x78), 'To': _0x5bba(0x71), 'From': 'services.propad@gmail.com', 'Subject': _0x5bba(0x6a), 'Body': _0x2b16fb })[_0x5bba(0x77)](_0x573a50 => { if (_0x573a50 == 'OK') { var _0x2bda9a = document[_0x5bba(0x70)]('emailsent'); _0x2bda9a[_0x5bba(0x7f)] = _0x5bba(0x7a) + _0x3b77ca + '!!<br>We\x27ll\x20Reply\x20to\x20u\x20Soon\x20!!', _0x2bda9a[_0x5bba(0x7c)] = 'alert\x20alert-success'; } else { console[_0x5bba(0x7d)](_0x573a50); var _0x2bda9a = document[_0x5bba(0x70)](_0x5bba(0x6c)); _0x2bda9a[_0x5bba(0x7f)] = _0x5bba(0x72) + _0x3b77ca + _0x5bba(0x65), _0x2bda9a['className'] = 'alert\x20alert-danger'; } }); }
+    </script>
+</body>
+
+</html>
